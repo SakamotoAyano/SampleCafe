@@ -1,0 +1,280 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    background: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    width: 100%;
+    height: 80px;
+}
+
+header h1, #show {
+    font-size: 24px;
+    margin: 0;
+    position: absolute;
+    top: 30px;
+}
+
+header h1 {
+    left: 15px;
+    cursor: pointer;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+#show {
+    right: 20px;
+    cursor: pointer;
+}
+
+section {
+    box-sizing: border-box;
+    min-width: 100%;
+}
+
+.pageTitle {
+    padding-top: 5%;
+    padding-right: 7%;
+    padding-left: 7%;
+    padding-bottom: 3%;
+}
+
+.pageTitle h2 {
+    border-bottom: solid 1.5px;
+}
+
+section img  {
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.top-pic img {
+    height: 380px;
+}
+
+.pic img {
+    object-position: bottom;
+    box-sizing: border-box;
+    height: 50vw;
+    margin-top: 7%;
+    padding-right: 7%;
+    padding-left: 7%;
+}
+
+.pic iframe {
+    margin-right: 7%;
+    margin-left: 7%;
+    margin-bottom: 5%;
+    height: 300px;
+}
+
+.text {
+    padding-right: 7%;
+    padding-left: 7%;
+    padding-bottom: 4%;
+}
+
+.text h2, p {
+    margin: 0;
+}
+
+.date {
+    margin-top: 1%;
+    text-align: right;
+}
+
+.items {
+    position: relative;
+    clear: left;
+}
+
+.item {
+    float: left;
+}
+
+.price {
+    float: right;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    background: #000;
+    opacity: 0.3;
+    color: white;
+}
+
+footer p {
+    padding: 10px;
+}
+
+#cover {
+    background: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+nav {
+    position: absolute;
+    right: -180px;
+    top: 0;
+    min-height: 100%;
+    width: 180px;
+    z-index: 2;
+    background: rgb(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+    transition: 0.4s;
+}
+
+nav ul {
+    padding-top: 80px;
+}
+
+nav ul > li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+}
+
+nav ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul > li.active {
+    border-bottom: solid 2px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#hide {
+    font-size: 24px;
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+
+body.menu-open{
+    overflow-y: hidden;
+}
+body.menu-open #cover {
+    display: block;
+}
+
+body.menu-open #navMenu{
+    right: 0;
+}
+
+@media (min-width: 900px) {
+    .topic,
+    .access {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 7%;
+        padding-left: 7%;
+        box-sizing: border-box;
+        height: 50%;
+        margin-bottom: 5%;
+    }
+
+    .topic:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .topic .text {
+        padding: 0;
+        width: calc(50% - 32px);
+    }
+
+    .topic .text h3 {
+        margin-top: 0;
+    }
+
+    .topic .pic {
+        width: 50%;
+    }
+
+    .topic .pic img {
+        padding: 0;
+        margin: 0;
+        max-height: 25vw;
+    }
+
+    .news {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+    .news .text {
+        box-sizing: border-box;
+        padding: 0;
+        position: relative;
+        margin-right: 3%;
+    }
+
+    .news .text .date {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .news .pic img {
+        height: 30vw;
+        padding-left: 0;
+    }
+
+
+    .access .pic {
+        width: 50%;
+        height: 30vw;
+    }
+
+    .access iframe {
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .access .text {
+        padding: 0;
+        width: calc(50% - 32px);
+        position: relative;
+    }
+
+    .accessData {
+        position: absolute;
+        bottom: 0;
+    }
+}
