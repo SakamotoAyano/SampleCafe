@@ -1,5 +1,5 @@
 # SampleCafe
-架空のカフェのレスポンシブWEBサイトです。[こちら](https://sample-cafe-aa53f.firebaseapp.com/)からどうぞ
+架空のカフェのWEBサイトです。レスポンシブ対応しています。[こちら](https://sample-cafe-aa53f.firebaseapp.com/)からどうぞ
 
 ## 使用している言語
 HTML/CSS/Javascript
